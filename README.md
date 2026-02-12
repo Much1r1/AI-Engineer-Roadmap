@@ -1,5 +1,5 @@
 # AI-Engineer-Roadmap
-# Phase 1: Car Rental Financial Data Analysis 🚗📊
+# Phase 1: Car Rental Financial Data Analysis
 
 ## Project Overview
 This project marks the first milestone in my **AI Engineer Roadmap**. The goal was to practice foundational data handling skills using Python and Pandas, focusing on a real-world dataset involving vehicle financial transactions.
