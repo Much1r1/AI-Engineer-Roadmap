@@ -1,38 +1,57 @@
-# AI-Engineer-Roadmap
-# Phase 1: Car Rental Financial Data Analysis
+# AI-Driven Fleet Management & Intelligence System
+**Phase 1 & 2: Financial Engineering, Predictive Modeling, and NLP Insights**
+
+[![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
+[![Framework](https://img.shields.io/badge/Framework-FastAPI-green.svg)](https://fastapi.tiangolo.com/)
+[![AI Engine](https://img.shields.io/badge/AI_Engine-TensorFlow_/_Scikit--Learn-orange.svg)](https://www.tensorflow.org/)
 
 ## Project Overview
-This project marks the first milestone in my **AI Engineer Roadmap**. The goal was to practice foundational data handling skills using Python and Pandas, focusing on a real-world dataset involving vehicle financial transactions.
-
-## Dataset Description
-The dataset represents the financial ledger of a vehicle rental company. It tracks:
-* **Transactions:** Rental income, vehicle purchases, and miscellaneous costs.
-* **Assets:** Unique vehicles identified by license plates (1,393 unique values).
-* **Descriptions:** Detailed logs of the specific car models involved (e.g., FIAT ARGO, DUSTER).
-
-## Key Objectives
-1.  **Data Loading:** Efficiently importing large CSV files into a Pandas DataFrame.
-2.  **Data Cleaning:** Identifying missing values and ensuring numerical consistency.
-3.  **Exploratory Analysis:** Aggregating data to understand revenue vs. expenditure.
-
-## Initial Insights
-* **Transaction Mix:** Approximately 90% of the ledger entries are 'Rental' transactions, while 'Purchases' represent high-value capital outflows.
-* **Data Integrity:** The dataset contains negative values (expenditures) and positive values (revenue), requiring careful handling during aggregation to avoid misleading sums.
-
-## Potential AI Use Cases
-Later in this roadmap, this data could be used to build:
-* **Predictive Maintenance:** Forecasting when a vehicle might need service based on rental frequency.
-* **Revenue Forecasting:** Predicting monthly income based on seasonal rental patterns.
-* **ROI Analysis:** Calculating the "break-even" point for newly purchased vehicles.
+This repository contains the core intelligence engine for a next-generation car rental application. By leveraging a real-world dataset of 1,300+ vehicles, this system moves beyond simple record-keeping to provide **predictive business insights**, **automated maintenance triggers**, and **AI-personalized recommendations**.
 
 ---
-### Technical Stack
-* **Environment:** Google Colab
-* **Language:** Python 3.x
-* **Library:** Pandas
 
-## Feature Engineering for App Integration
-To prepare the data for a mobile UI, I implemented a feature engineering pipeline that:
-* **Extracted Brands:** Parsed raw strings to identify manufacturers.
-* **Categorized Fleet:** Developed a logic-based classifier to group vehicles into 'Economy', 'SUV', and 'Premium' tiers.
-* **Engine Mapping:** Isolated engine displacement values to allow for user-side filtering by performance/efficiency.
+## Key AI Features
+
+### 1. Contract Duration Predictor (Regression)
+Instead of manual scheduling, the system uses a **Linear Regression & Random Forest** hybrid to forecast how long a vehicle will be off-lot based on customer industry and car category.
+* **Performance:** Achieved a Mean Absolute Error (MAE) of **1.72 months**.
+* **Key Insight:** AI identified the **Energy Sector** as the highest-stability client, providing **+12 months** of additional contract length compared to standard retail.
+
+### 2. Smart-Match Recommendation Engine
+A similarity-search algorithm based on **Cosine Similarity** that ensures 100% fleet utilization.
+* **Logic:** If a specific model is unavailable, the AI parses the "Vehicle DNA" (Engine Size + Category) to suggest the top 3 nearest alternatives to the user.
+
+### 3. Sentiment-Driven Maintenance (NLP)
+Integrating **HuggingFace Transformers (DistilBERT)** to monitor the "pulse" of the fleet.
+* **Automated Action:** The system analyzes raw text reviews; negative sentiment scores coupled with keywords like *"engine"* or *"noise"* automatically flag the vehicle for inspection in the backend.
+
+---
+
+## Data Engineering & Pipeline
+Before modeling, the raw financial ledger was transformed via a robust pipeline:
+* **Asset Monetization:** Grouped 1,300+ unique license plates to calculate individual **Net Profit/Loss** and ROI.
+* **Feature Extraction:** Regex-based parsing of descriptions to isolate **Brand**, **Engine Displacement**, and **Vehicle Tier**.
+* **Normalization:** Implemented Label Encoding and One-Hot Encoding for multi-segment categorical data (Mining, Agribusiness, Energy, etc.).
+
+
+
+---
+
+## Technical Architecture
+* **Data Science:** `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`
+* **Machine Learning:** `Scikit-Learn`, `TensorFlow` (Deep Learning MLP)
+* **NLP:** `TextBlob`, `Transformers` (BERT-based)
+* **Inference:** `Joblib` for model serialization
+
+---
+
+## Roadmap
+- [x] Phase 1: Financial Data Analysis & Cleaning
+- [x] Phase 2: Predictive Modeling & Regression
+- [x] Phase 3: Sentiment Analysis & NLP Integration
+- [ ] **Next Step:** Deploy as a **REST API** using FastAPI & Docker.
+
+---
+
+## 🤝 Contact & Contribution
+This project is part of my **AI Engineer Roadmap**. Feel free to reach out for collaboration on car-rental tech or AI optimization!
