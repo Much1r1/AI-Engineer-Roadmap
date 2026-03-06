@@ -1,4 +1,5 @@
-###🌍 Environmental Impact Analyzer (AI Intelligence Suite)
+##🌍 Environmental Impact Analyzer (AI Intelligence Suite)
+------
 ##📌 Project Overview
 A multi-modal AI system designed to tackle environmental challenges from two angles:
 - Macro-Level (The Sentinel): An LSTM-based Time-Series model for predicting city-wide Air Quality (AQI).
